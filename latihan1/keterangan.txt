@@ -1,0 +1,32 @@
+-- Prototype ---
+
+1. Object Literal:
+    - Object:
+        - Isinya adalah property dan method
+        - Di dalam object ada keyword this
+    - property:
+        - Isinya adalah nilai
+    - Method:
+        - Adalah function yang ada di dalam object
+        - Isinya adalah function
+    - String (``):
+        - Adalah string literal
+
+2. Function Declaration:
+    - Dengan menggunakan function declaration keuntungannya tidak perlu membuat duplicate dari objectnya
+      tetapi hanyak cukup membuat templatenya satu dan ketika ingin membuat dua atau tiga buah object tinggal
+      memanggilnya atau istilahnya instansiasinya saja yang berulang kali
+
+3. Constructor Function (Keyword new):
+    - Dengan menggunakan constructor function sangat sering digunakan, sebenarnya sama seperti function declaration 
+    - Perbedaannya:
+        - Jika menggunakan constructor function tidak perlu menuliskan deklarasi variabel dan return nya, karena sudah
+          secara automatis dilakukan oleh javascript nya
+            - Contoh:
+                - let mahasiswa = {};
+                - return mahasiswa;
+    Tambahkan new ditengah instansiasinya ketika ingin memanggil objectnya
+        - Contoh:
+            - let rifki = new Mahasiswa('Rifki Ramadhan', 10);
+    - Dengan menggunakan constructor function akan memudahkan ketika ingin membuat prototype, dan juga akan lebih jelas 
+      ketika ingin menggunakan object.create
