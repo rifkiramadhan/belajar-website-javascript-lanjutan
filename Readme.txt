@@ -1,3 +1,5 @@
+---- SOURCE CODE INI MASIH BERLANJUT ----
+
 ---- JavaScript Lanjutan (Advanced JavaScript) ----
 
 1. Prototype:

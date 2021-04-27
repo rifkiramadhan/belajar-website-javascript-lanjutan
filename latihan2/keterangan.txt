@@ -1,0 +1,53 @@
+---- Closures 1 ----
+
+1. Execution Context, Hoisting, Scope:
+    - Konsep ini merupakan konsep pada javascript yang cukup unik atau bisa dibilang agak aneh untuk
+      sebuah bahasa pemrograman
+    - Ketiga hal ini cukup penting untuk dipelajari agar tidak kebingungan ketika memasuki topik-topik yang
+      lebih lanjut lagi
+    
+    A. Execution Context:
+        - Adalah saat program dijalankan
+            - Creation:
+                - Creation phase:
+                    - console.log(nama);
+                    - var nama = 'Rifki Ramadhan';
+                    - Error Undefined, karena konteks global jadi penulisan console tidak boleh dibalik
+                    - Penulisan nya harus berada di dalam function
+                - Execution phase:
+                    - Mengeksekusi program, baris per baris dari atas ke bawah
+                    - Ini yang menjadi javascript merupakan sebuah bahasa yang unik
+            - Execution:
+                - Ini yang menjadi javascript merupakan sebuah bahasa yang unik
+                - Jika menjalankan function dan membalik console log ke atas serta memanggil function menggunakan 
+                  "console.log(sayHello());" artinya mengeksekusi tetapi hasilnya Undefined karena Hoisting atau menulis
+                  variable nya dibawahnya, hal itu tidak disarankan
+                - Ketika ingin menjalankan program secara efektif maka harus mengubah "console.log" nya menjadi "return" di
+                  dalam function nya
+                - Link untuk mencoba mengeksekusi visualisasi javascript:
+                    - http://pythontutor.com/visualize.html#mode=edit
+            - Jika terdapat variable maka di isi dulu dengan Undefined pada fase creation, kedua baru masuk ke fase 
+              execution atau memasukkan nilai variable nya
+    
+    B. Hoisting:
+        - Seperti mengerek bendera jadi benderanya dinaikkan ke atas
+        - Jika terjadi creation phase, maka secara otomatis akan dinaikkan ke atas sehingga ketika dijalankan minimal 
+          output variable nya harus menjadi Undefined
+          - Contoh sebelum dihoisting:
+            - console.log(i);
+              var i = 10;
+          - Contoh sesudah dihoisting:
+            - var i;
+            - console.log(i);
+            - i = 10;
+          - Contoh output:
+            - Undefined (Tetapi tetap ada nilai didalamnya)
+          - Jadi konsep hoisting itu variable nya di naikkan terlebih dahulu ke atas dan di isi dengan nilai Undefined
+          - Ini adalah Contoh hoisting untuk variable
+
+    C. Scope:
+        - Mengecek argument secara lokal maupun global, kemudian bisa dijalankan menggunakan konsep Hoisting (Undefined)
+          karena pada fase creation, lalu baru dapat dimasukkan ke fase execution atau memasukkan nilai variable nya sehingga
+          ketika source code nya dijalankan maka akan lebih efektif
+        - Dan baiknya ketika ingin melakukan sesuatu sebaiknya variable dibuat terlebih dahulu entah secara local maupun global
+          agar tidak terjadi hoisting (Undefined) pada output

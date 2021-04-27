@@ -1,0 +1,10 @@
+---- QuickTip: Var, Let & Const ----
+
+1. Var:
+    - Var adalah sebuah keyword di javascript untuk membuat variable
+        - Contoh:
+            - var x = 10;
+              var nama = "Rifki Ramadhan";
+    - Jangan gunakan var ubah semua var yang dibuat dengan menggunakan let
+2. Lanjut:
+    - Menit 07:02

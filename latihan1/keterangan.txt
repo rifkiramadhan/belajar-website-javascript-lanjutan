@@ -1,9 +1,10 @@
--- Prototype ---
+-- Prototype JavaScript ---
 
 1. Object Literal:
     - Object:
         - Isinya adalah property dan method
         - Di dalam object ada keyword this
+        - Object menggunakan "{} Kurung kurawal", array menggunakan "[] Kurung siku"
     - property:
         - Isinya adalah nilai
     - Method:
@@ -11,6 +12,9 @@
         - Isinya adalah function
     - String (``):
         - Adalah string literal
+
+    Problem:
+        - Tidak efektif untuk object yang banyak
 
 2. Function Declaration:
     - Dengan menggunakan function declaration keuntungannya tidak perlu membuat duplicate dari objectnya
@@ -25,8 +29,28 @@
             - Contoh:
                 - let mahasiswa = {};
                 - return mahasiswa;
-    Tambahkan new ditengah instansiasinya ketika ingin memanggil objectnya
+        - Tambahkan new ditengah instansiasinya ketika ingin memanggil objectnya
         - Contoh:
             - let rifki = new Mahasiswa('Rifki Ramadhan', 10);
     - Dengan menggunakan constructor function akan memudahkan ketika ingin membuat prototype, dan juga akan lebih jelas 
       ketika ingin menggunakan object.create
+
+4. Object.create
+    - Sama saja seperti membuat object baru sama seperti simbol "{} Membuat object", perbedaannya object.create bisa menyimpan
+      parameter di dalam "() Menyimpan parameter", dan parameternya mengacu ke parent objectnya 
+    - Jadi tidak perlu mendaftarkan method dari fungsi yang terdapat pada object literal kedalam object function declaration
+    - Dengan menggunakan object.create bisa langsung memberi tahu parent objectnya, object satu apa yang terhubung dengan object dua
+      dan tidak perlu mendaftarkan method-method nya kedalam object 2 yang terhubung
+    - Dengan cara ini dapat menghemat penggunaan efektifitas memori, tetapi problemnya adalah memungkinkan untuk mengelola dua buah
+      object
+
+5. Prototyple Inheritance
+    - Lebih ringkas dari object.create
+    - Lebih rumit untuk dibaca daripada vesi yang lainnya
+    - Dengan memahami prototype dapat memahami tipe data apapun pada javascript, karena sebenarnya apapun yang ada di dalam javascript
+      adalah object karena javascript adalah object pasti memiliki prototype
+
+6. Versi class Class
+    - Lebih mudah dibaca dan lebih mudah dipahami dari Prototyple Inheritance
+    - Class dibuat untuk membungkus syntax agar masuk akal ketika dibaca, tetapi sebenarnya yang terjadi di belakang layar
+      adalah konsep penulisan syntax menggunakan prototype yang terjadi

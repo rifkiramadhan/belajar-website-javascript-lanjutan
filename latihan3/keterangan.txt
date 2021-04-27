@@ -1,0 +1,36 @@
+---- Closures 2 ----
+
+1. Pengertian Definisi Closures:
+    - Menurut Mozilla (MDN):
+        - "Closure merupakan kombinasi antara function dan lingkungan leksikal (lexical scope) di dalam function
+          tersebut."
+    - Menurut W3school:
+        - "Closure adalah sebuah function ketika memiliki akses ke parent scope nya, meskipun parent scope nya
+          sudah selesai dieksekusi."
+        - Jadi sebuah function bisa memilik function di dalamnya tapi kasus tersebut bukan merupakan sebuah Closure,
+          akan menjadi Closure ketika function di dalamnya memiliki akses ke parent scope nya
+    - Menurut Code Fellow:
+        - Closure adalah sebuah function dikembangkan oleh function yang lain, yang memiliki akses ke lingkungan saat
+          ia diciptakan
+        - Jadi bisa membuat function yang mengembalikan atau mereturn function, bukan function di dalam function tetapi
+          function mereturn function
+    - Menurut Techsith:
+        - Closure adalah sebuah function yang sebelumnya sudah memiliki data, hasil dari function yang lain
+
+2. Lexical Scope:
+    - Contoh:
+        - function init() {
+            let nama = 'Rifki Ramadhan';
+            function tampilNama() {
+                console.log(nama);
+            }
+            tampilNama();
+        }
+        init();
+
+3. Kenapa menggunakan Closure:
+    - Menurut MDN, Untuk membuat function Factories
+        - Membuat function dengan function yang lain
+    - Menurut MDN, Untuk membuat private method
+
+4. Hal ini bukanlah hal yang mudah dipahami akan tetapi sangat penting untuk dicoba dan dimengerti
