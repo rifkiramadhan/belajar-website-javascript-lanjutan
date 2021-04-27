@@ -1,0 +1,12 @@
+---- Arrow Function Lanjutan ----
+
+1. Pengertian:
+    - Konteks this ketika menggunakan Arrow Function:
+        - Ketika menggunakan Function entah itu Function declaration, dan expression itu di dalam Function
+          memiliki konteks this
+        - Jika mengubah Function expression menjadi Arrow Function maka konteks this nya itu menjadi berbeda
+    - Semua Function tidak bisa diubah menjadi arrow Function tetapi kalau method bisa
+    - Menggunakan Function expression dan arrow Function fungsinya sama, tetapi tidak ada konsep this di dalam 
+      arrow function tetapi akan mencari konsep this ke luar arrow function
+    - Jika menggunakan function maka this nya akan mencari ke lexical scope nya (mencari keluar) sampai ke window
+      jika tidak ada maka tampilkan undefined (hoisting)

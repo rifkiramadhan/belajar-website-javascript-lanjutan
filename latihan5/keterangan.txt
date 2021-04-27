@@ -1,0 +1,21 @@
+---- Arrow Function ----
+
+1. Pengertian:
+    - Menurut MDN:
+        - Bentuk lain yang lebih ringkas dari Function expression
+        - Jadi ini adalah cara lain untuk menuliskan sebuah Function tetapi menjadi lebih ringkas
+    - Contoh:
+        - let tampilPesan = nama => {
+            alert('Halo ' + pesan);
+        }
+
+        tampilPesan('Rifki Ramadhan');
+        - Jika memiliki sebuah parameter maka tidak wajib memakai kurung "()"
+        - Jika memiliki lebih dari satu parameter maka wajib memakai kurung "()"
+        - Jika isi dari functionya hanya return saja maka tidak wajib menggunakan return dan lebih ringkasnya
+          lagi tidak wajib menggunakan kurung kurawalnya (Implisit return)
+        - Jika tidak ada parameter nya maka wajib menuliskan "()"
+
+    - Jika ingin mengembalikan object yang property nya sama dengan nilainya tidak perlu menuliskan kedua nilainya
+      cukup ditulis satu saja
+    

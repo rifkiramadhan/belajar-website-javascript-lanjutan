@@ -6,5 +6,33 @@
             - var x = 10;
               var nama = "Rifki Ramadhan";
     - Jangan gunakan var ubah semua var yang dibuat dengan menggunakan let
-2. Lanjut:
-    - Menit 07:02
+
+2. Scopee:
+    - JavaScript adalah function scope bukan block scope seperti pemrograman lain seperti C atau Java
+    - Biasanya paraprogrammer javascript mencari ide untuk membuat function scope pada javascript tetapi
+      bisa dilakukan seperti bahasa pemrograman yang lain menggunakan
+        - Contoh:
+            - IIFE
+                - Singkatan dari "Immediately Invoked Function Expression"
+                - Jadi sebuah function expression yang dipanggil langsung ketika dibuat
+            - SIAF
+                - Singkatan dari "Self Invoking Anonymous Function"
+                - Anonymous function itu adalah fungsi yang tidak bernama menggunakan function expression
+                - Dibuat supaya dapat menjaga agar variable yang ada di dalam function nya tidak dapat di
+                  akses dari luar
+    - Pertanyaan:
+        - Bagaimana mengenai block scope yang ada di dalam javascript?
+    - Jawaban:
+        - 10 hari adalah waktu yang tidak cukup untuk membuat bahasa pemrograman javascript sebetulnya untuk
+          membuat block scope, itulah mengapa agak aneh prilaku pada bahasa pemrograman javascript
+    - Let dan Const itu menganut block scope, maka sangat disarankan tidak di perkenankan untuk menggunakan var
+      karena var tidak menganut block scope
+
+3. Let:
+    - Untuk membuat variable tetapi variable nya yang dapat diubah lagi
+    - Gunakan var atau let ketika ingin menggunakan for saja
+
+4. Const:
+    - Adalah constanta
+    - Untuk membuat variable tetapi variable nya yang tidak dapat diubah lagi (Immutable)
+    - Menggunakan const supaya meminimalisir perubahan state
