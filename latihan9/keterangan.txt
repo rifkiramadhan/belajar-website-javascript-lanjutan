@@ -1,0 +1,22 @@
+---- Template Literals / Template String ----
+
+1. Pengertian:
+    - Menurut MDN Web Docs:
+        - "Template literal adalah string literal yang memungkinkan adanya sebuah expression di dalamnya"
+    - String Literal:
+        - Adalah string yang biasa dibuat dengan variable atau bisa dicetak menggunakan "cosole.log"]
+            Contoh:
+                - '' Petk satu:
+                    - Adalah string yang biasa dilakukan dalam bahasa pemrograman apapun
+                - "" Petik dua:
+                    - Adalah string yang sedikit lebih sakti, karena bisa melakukan interpolasi
+                    - Pada javscript petika satu dan petik dua fungsinya sama saja
+                - `` Back tick:
+                    - Memungkinkan untuk membuat template literal:
+                        - Menggunakan pembatas backtick ``:
+                            - Dengan menggunakan backtick bisa melakukan banyak hal:
+                                - Multiline string
+                                - Embedded Expression
+                                - HTML Fragments
+                                - Expression Interpolation
+                                - Tagged Template

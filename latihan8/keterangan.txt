@@ -1,0 +1,9 @@
+---- Javascript HOF ----
+
+1. Catatan:
+    - floor():
+        - Mengambil bawahnya (Pembulatan kebawah)
+    - ceil():
+        - Langit-langit (Pembulatan keatas)
+    - round():
+        - Pembulatan ke yang paling dekat

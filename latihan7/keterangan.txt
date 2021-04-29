@@ -1,0 +1,40 @@
+---- Higher Other Function ----
+
+1. Pengertian: 
+    - Menurut https://eloquentjavascript.net:
+        - "Function yang beroperasi pada function yang lain. Baik itu digunakan dalam argument,
+           maupun sebagai return value."
+        - Di dalam javascript function disebut sebagai First Class Function
+    - Menurut sitepoint.com
+        - "Javascript memperlakukan function sebagai object."
+    - Ketika menggunakan functin bisa menggunakan function kembali sebagai argument nya
+
+2. Kenapa harus menggunakan Higher Other Function?:
+    - Abstraksi
+        - Untuk membuat agar kode yang dibuat bisa lebih sederhana atau bisa lebih simple, karena dengan
+          menggunkan function itu artinya menyembunyikan kerumitan, karena:
+            - Menurut https://eloquentjavascript.net:
+                - "Semakin besar sebuah program, semakin tinggi kompleksitasnya, semakin membingungkan programmernya"
+            - Menurut C.A.R Hoare, 1980 ACM Turing Award Lecture:
+                - Ada dua cara untuk merancang sebuah software:
+                    - Cara pertama adalah untuk membuat programnya se-sederhana mungkin sehingga jelas-jelas tidak ada
+                      kekurangannya. 
+                    - dan cara lainnya adalah untuk membuat programnya se-kompleks mungkin sehingga tidak
+                      ada kekurangan yang jelas.
+                    - Semakin simple programnya, semakin sederhana, semakin kecil kemungkinannya ada kesalahan didalamnya
+    
+    - Functional Progarmming:
+        - Dengan melakukan pendekantan di functional programming karena sebetulnya javascript bukan bahasa pemrograman Functional
+          murni tapi bisa dibuat menjadi seperti bahasa pemrgoraman functional, dan ketika membuat paradigma ini dengan benar itu
+          akan membuat program lebih efektif, aman dan lebih effisien lagi
+
+3. Contoh Higher Other Function:
+    - Array.prototype.map():
+        - Untuk mapping pada array
+    - Array.prototype.filter():
+        - Untuk menyeleksi isi array
+    - Array.prototype.reduce():
+        - 
+
+4. Method:
+    - Chain
