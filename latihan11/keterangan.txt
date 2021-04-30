@@ -1,0 +1,26 @@
+---- Tagged Templates ----
+
+1. Pengertian:
+    - Menurut MDN Web Docs
+        - "Bentuk yang lebih kompleks dari Template Literals, memungkinkan kita untuk membaca template
+           literals melalui sebuah function."
+        - Jadi ketika sudah membuat template literals, string tersebut bisa dimasukkan kedalam function
+          untuk mengubah bentuk dari string tadi
+
+2. Catatan:
+    - Javascript versu terbaru memiliki cara modern yaitu:
+        - Menambahkan titik sebanyak "... Rest parameter":
+            - Dapat menampung seluruh expression yang ada di dalam template literals nya
+            - "...namaVariableNya"
+                - Nama variablenya akan menjadi sebuah array yang berisi semua experssion yang berada di
+                  dalam template literals, jadi tidak perlu mengambil satu-satu lagi sebagai parameter
+        - Strings untuk mengambil string biasa
+        - Values untuk mengambil expression
+
+3. Penggunaan Lain Tagged Template:
+    - Escaping HTML Tags (Sanitasi HTML Tags):
+        - Untuk menghindari ketika ada script atau karakter yang tidak di inginkan pada halaman web
+    - Translation & Internationalization:
+        - Atau digunakan juga untuk translasi atau internasionalisasi
+    - Styled Components:
+        - Yang sering digunakan untuk front end framework untuk styled components misalnya menggunakan vue / react

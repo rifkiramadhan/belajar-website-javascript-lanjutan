@@ -1,0 +1,8 @@
+---- Destructuring Variable (Destructuring Assignment) ----
+
+1. Pengertian:
+    - Fitur ini cukup unik dalam modern javascript
+    - Menurut MDN Web Docs
+        - "Expression pada javascript yang membuat kita dapat membongkar nilai dari array atau properti dari object
+           kedalam variabel yang terpisah."
+        - Jadi ini agak unik, karena bisa membongkar / unpacking array attau object

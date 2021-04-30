@@ -15,7 +15,8 @@
                     - Memungkinkan untuk membuat template literal:
                         - Menggunakan pembatas backtick ``:
                             - Dengan menggunakan backtick bisa melakukan banyak hal:
-                                - Multiline string
+                                - Menggunakan `` backtick
+                                - Multi-line string
                                 - Embedded Expression
                                 - HTML Fragments
                                 - Expression Interpolation
