@@ -1,0 +1,9 @@
+---- Spread Operator VS Rest Parameter ----
+1. Pengertian:
+    - Kedua hal ini direpresentasikan dengan karakter tiga buah "..." titik, meskipun notasinya sama
+      tetapi kedua hal tadi sebetulnya berbeda
+
+---- Spread Operator ----
+1. Pengertian:
+    - Menurut MDN:
+        - "Memecah (expand / unpack) iterables menjadi single element"

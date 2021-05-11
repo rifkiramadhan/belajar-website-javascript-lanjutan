@@ -1,0 +1,30 @@
+---- For...Of ----
+1. Pengertian:
+    - Menurut MDN:
+        - "Creates a loop iterating over iterable object"
+        - Jadi for of adalah sebuah looping yang bisa mengulang atau menelusuri object-object yang iterable
+        - Jenis Iterable Object:
+            - String
+                - String merupakan iterable
+            - Array
+            - Arguments / NodeList
+                - Arguments adalah array untuk menanpung argument-argument pada function, sedangkan node NodeList
+                  adalah ketika melakukan query pada DOM
+            - TypedArray
+            - Map
+            - Set
+            - User-defined iterables (Iterables yang dibuat sendiri)
+
+---- For...In ----
+2. Pengertian:
+    - Menurut MDN:
+        - "Creates a loop only iterating over enumerable"
+        - Jadi ini hanya untuk enumerable, enumerable disini maksudnya adalah property pada object
+
+3. Catatan:
+    - Foreach hanya bisa digunakan untuk melooping array
+    - Ketika Foreach memiliki 2 parameter, maka parameter kedua akan menjadi "i" atau index nya
+    - Untuk browser versi terbaru bisa melooping NodeList menggunakan Foreach, walaupun sebetulnya Foreach
+      khusus untuk melooping array
+    - Jika ingin melooping property dari object maka gunakanlah for..in
+    - Jika inngin mengulang isi array dan iterables object yang lain maka gunakanlah for..of
