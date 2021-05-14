@@ -7,3 +7,14 @@
 1. Pengertian:
     - Menurut MDN:
         - "Memecah (expand / unpack) iterables menjadi single element"
+        - Menggunakan notasi "..."
+
+---- Rest Parameter ----
+1. Pengertian:
+    - Menurut MDN:
+        - "Merepresentasikan argument pada function dengan jumlah yang tidak terbatas menjadi sebuah array"
+        - Jika di dalam function bisa menyimpan argument yang argument nya bisa ditangkap ke dalam variable,
+        - Tetapi dengan menggunakan Rest Parameter ini bisa menangkap banyak argument sampai tidak terbatas untuk
+          menjadi sebuah array
+        - Menggunakan notasi "..."
+        - Hanya bisa digunakan di akhir argument nya

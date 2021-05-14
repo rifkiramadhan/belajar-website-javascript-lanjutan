@@ -1,0 +1,37 @@
+[
+    {
+        "nama" : "Rifki Ramadhan",
+        "nrp" : "0001",
+        "email" : "riifkiramadhan2@gmail.com",
+        "jurusan" : "Teknik Informatika",
+        "IdMhs" : 1
+    },
+    {
+        "nama" : "Rayani Putri",
+        "nrp" : "0002",
+        "email" : "rayani@gmail.com",
+        "jurusan" : "Teknik Informatika",
+        "IdMhs" : 2
+    },
+    {
+        "nama" : "Ardian",
+        "nrp" : "0003",
+        "email" : "ardian@gmail.com",
+        "jurusan" : "Teknik Informatika",
+        "IdMhs" : 3
+    },
+    {
+        "nama" : "Faqih Yugo",
+        "nrp" : "0004",
+        "email" : "faqih@gmail.com",
+        "jurusan" : "Teknik Informatika",
+        "IdMhs" : 4
+    },
+    {
+        "nama" : "Raras Wati",
+        "nrp" : "0005",
+        "email" : "raraswati@gmail.com",
+        "jurusan" : "Teknik Informatika",
+        "IdMhs" : 5
+    }
+]

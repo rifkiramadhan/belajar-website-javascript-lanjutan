@@ -1,0 +1,59 @@
+---- Asynchronous JavaScript ----
+1. Pengertian:
+    - Menurut http://latentflip.com/loupe/:
+      - "Javascript, is single-threaded, non-blocking, asynchronous and concurrent language"
+        - Single-Threaded:
+            - Thread adalah urutan eksekusi kode yang dapat dilakukan secara bebas / independent satu
+              sama lain.
+            - Jadi intinya javascript hanya bisa melakukan satu hal pada satu waktu tertentu
+            - Anggap saja javascript membaca baris per baris dan menyelesaikannya
+        - Multi-Threaded:
+            - Thread nya bisa banyak, walaupun secara umum tetap saja pekerjaannya hanya bisa dilakukan
+              satu per satu tetapi bisa saja dikerjakan oleh Thread yang berbeda
+        - Blocking:
+            - Ketika memiliki sebuah task atau script pada saat di eksekusi ternyata script ini membutuhkan waktu yang
+              lama, jika task satu belum selesai di eksekusi maka tidak bisa masuk ke task berikutnya jadi harus menunggu
+              terlebih dahulu.
+        - Non-Blocking:
+            - Ketika mengerjakan satu hal walaupun pekerjaannya belum selesai bisa melanjutkan ke task berikutnya
+        - Synchronous:
+            - Itu berjalan normal seperti biasa
+        - Asynchronous (Single Threaded / Berpindah-pindah): 
+            - Ketika mengerjakan satu task walaupun belum selesai di eksekusi tetapi tasknya bisa pindah ke task
+              dua, dan jika task dua belum selesai pindah lagi ngerjain task satu, dua. Sampai akhirnya task satu
+              selesai dan task yang kedua juga selesai
+            - Menjadi sesuatu yang concurrency
+        - Asynchronous (Multi Threaded): 
+            - Terdapat tiga Thread dan bisa mengerjakannya secara bersamaan dalam satu waktu tertentu
+            - Menjadi sesuatu yang Parallelism
+
+2. Kesimpulan:
+    - Single vs Multi Thread:
+        - Lingkungan ekseskusi 'task'
+        - Dikerjakannya dalam satu Thread atau banyak Thread
+    - Blocking vs Non-blocking:
+        - Teknik 'ngoding' (IO Related)
+        - Ini adalah teknik ngoding yang biasanya ada hubungannya dengan input dan output, ketika tombol diklik, ketika
+          memilih sesuatu, dan ketika mengerjakan sebuah fungsi yang kompleks
+    - Synchronous vs Asynchronous:
+        - Teknik 'ngoding' (HTTP Request Related)
+        - Ini adalah teknik ngoding yang ada hubungannya dengan Request terhadap HTTP, jadi biasanya jika mau menggunakan
+          AJAX.
+    - concurrency vs Parallelism:
+        - Lingkungan eksekusi 'task'
+        - Biasanya jika concurrency dan Parallelism juga ada hubungannya dengan infrastruktur dengan hardware atau
+          virtualisasi misalnya
+        - Don't block the event loop!
+
+3. Pengertian JavaScript:
+    - Javascript => V8 Engine
+
+1. Callbacks
+    - Menurut MDN:
+        - "Function yang dikirimkan sebagai parameter pada function lain"
+    
+    - Menurut Codeburst:
+        - "Function yang dieksekusi setelah fungsi lain selesai dijalankan"     
+2. Promise
+3. Ajax
+4. Async & Await
