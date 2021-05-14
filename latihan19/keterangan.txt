@@ -1,0 +1,34 @@
+---- Promise Javascript ----
+
+1. Pengertian:
+    - Promise adalah sebuah object yang merepresentasikan keberhasilan atau kegagalan dari sebuah event yang
+      asynchronous yang akan terjadi di masa yang akan datang
+        - States / Janji (fulfilled / rejected / pending):
+            - Fullfilled:
+                - Terpenuhi
+            - Rejected:
+                - Diingkari
+            - Pending:
+                - Waktu tunggunya sebelum janjinya terpenuhi atau tidak terpenuhi 
+        - Callback / Untuk menjalankan 3 peran diatas (resolve / reject / finally):
+            - Resolve:
+                - Akan dibuat ketika janjinya terpenuhi
+            - Reject:
+                - Akan dibuat ketika janjinya tidak terpenuhi
+            - Finally:
+                - Dijalankan ketika method catch atau then sudah siap dijalankan, jadi jika Promise nya sudah tidak
+                  pending lagi finally terlebih dahulu dijalankan kemudian salah satu dari then atau catch
+                - Akan dibuat ketika waktu tunggunya selesai baik itu janjinya dipenuhi maupun tidak dipenuhi
+        - Aksi / Ketika janjinya terpenuhi atau tidak terpenuhi (then / catch):
+            - Then:
+                - Jika janjinya terpenhui lakukan ini
+                - Akan menjalankan resolve
+            - Catch:
+                - Jika janjinya tidak terpenuhi maka lakukan ini
+                - Akan menjalankan rejected
+        - Promise.All:
+            - Digunakan untuk menjalankan dan meringkas ketika memiliki banyak Promise yang ingin dijalankan sekaligus
+
+    - Promise adalah solusi untuk menangani dan menyelesaikan masalah callback hell
+
+    - Biasanya Promise digunakan ketika ingin merequest ke sebuah data API

@@ -1,45 +1,34 @@
-// Menggunakan Callback, dapat memungkinkan masuk ke dalam callback hell dan untuk menghindari callback hall ...
-// Solusinya dengan menggunakan Promise
-$('.search-button').on('click', function() {
-    $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=7cf6431&s=' + $('.input-keyword').val(),
+// Menggunakan Fetch
+const searchButton = document.querySelector('.search-button');
+searchButton.addEventListener('click', function() {
+    const inputKeyword = document.querySelector('.input-keyword');
+    fetch('http://www.omdbapi.com/?apikey=7cf6431&s=' + inputKeyword.value)
+    .then(response => response.json())
+    .then(response => {
+        const movies = response.Search;
+        let cards = '';
+        movies.forEach(m => cards += showCards(m));
+        const movieContainer = document.querySelector('.movie-container');
+        movieContainer.innerHTML = cards;
 
-        success: results => {
-            const movies = results.Search;
-            console.log(movies);
-    
-            let cards = '';
-    
-            movies.forEach(m => {
-                cards += showCards(m);
-            });
-            $('.movie-container').html(cards);
-    
-            // Ketika tombol detail di klik
-            $('.modal-detail-button').on('click', function() {
-                // console.log($(this).data('imdbid'));
-    
-                $.ajax({
-                    url: 'http://www.omdbapi.com/?apikey=7cf6431&i=' + $(this).data('imdbid'),
 
-                    success: m => {
-                        console.log(m);
-                        const movieDetail = showMovieDetail(m);
-    
-                        // Meminta ajax untuk mencarikan selector modal-body pada tag elemen html
-                        $('.modal-body').html(movieDetail);
-                    },
-                    error: (e) => {
-                        console.log(e.responseText);
-                    }
+        // Ketika tombol detail diklik
+        const modalDetailButton = document.querySelectorAll('.modal-detail-button');
+        modalDetailButton.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const imdbid = this.dataset.imdbid;
+                fetch('http://www.omdbapi.com/?apikey=7cf6431&i=' + imdbid)
+                .then(response => response.json())
+                .then(m => {
+                    const movieDetail = showMovieDetail(m);
+                    const modalBody = document.querySelector('.modal-body');
+                    modalBody.innerHTML = movieDetail;
                 });
             });
-        },
-        error: (e) => {
-            console.log(e.responseText);
-        }
+        });
     });
 });
+
 
 function showCards(m) {
     return `<div class="col-md-4 my-5">

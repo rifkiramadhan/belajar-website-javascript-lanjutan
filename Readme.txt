@@ -1,11 +1,5 @@
----- SOURCE CODE INI MASIH BERLANJUT ----
-
 ---- JavaScript Lanjutan (Advanced JavaScript) ----
 
-1. Prototype:
-    - Adalah konsep dari object yang harus dipahami
-    - Membuat Object pada JavaScript
-        - Object Literal
-        - Function Declaration
-        - Constructor Function (Keyword new)
-        - Object.create
+Ini adalah kumpulan source code lanjutan dari JavaScript DOM, yang telah dipelajari dari youtube
+channel Web Programming Unpas, silahkan pelajari secara perlahan sebagai modal pemahaman Anda
+ketika ingin mengulang menonton video tutorial JavaScript Lanjutan.

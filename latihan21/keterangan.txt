@@ -1,0 +1,49 @@
+---- JavaScript Promise ----
+
+1. Pengertian:
+    - Menurut MDN:
+        - "Sebuah method pada API javascript untuk mengambil resources dari jaringan, dan mengembalikan promise yang
+          selesai (fullfilled) ketika ada response yang tersedia"
+    - Konfigurasi tambahan:
+        - fetch(resource, init);
+            - resource:
+                - URL, alamat dari sumber yang diambil
+                - Requet Object, representasi permintaan sumber (dari resourcenya)
+            - init (optional):
+                - Konfigurasi tambahan pada sebuah request berbentuk object
+                    - Contoh:
+                        - method
+                        - headers
+                        - body
+                        - mode
+                        - cache
+                        - referrer
+                        - referrerPolicy
+                        - integrity
+                        - keepalive
+                        - signal
+            - response / yang dikembalikan dari hasil fetch:
+                - hasil dari fetch berupa promise
+                - Property:
+                    - headers
+                    - ok
+                    - redirected
+                    - status
+                    - statusText
+                    - type
+                    - url
+                    - body
+                - Method:
+                    - clone()
+                    - error()
+                    - redirect()
+                    - blob()
+                    - fromData()
+                    - json()
+                    - text()
+
+2. Catatan:
+    - Fetch adalah sebuah API pada JavaScript Modern yang tugasnya untuk mengambil data secara asyncronous atau AJAX
+      sama seperti melakukan XMLHttpRequest pada Vanilla JavaScript atau menggunakan method AJAX pada JQuery
+    - Fetch adalah fungsi pada JavaScript yang mengembalikan Promise
+    - Fetch dapat dipakai untuk membangun aplikai yang jauh lebih kompleks

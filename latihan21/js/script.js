@@ -1,45 +1,48 @@
-// Menggunakan Callback, dapat memungkinkan masuk ke dalam callback hell dan untuk menghindari callback hall ...
-// Solusinya dengan menggunakan Promise
-$('.search-button').on('click', function() {
-    $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=7cf6431&s=' + $('.input-keyword').val(),
+// Menggunakan Fetch Refactoring (Async Await)
 
-        success: results => {
-            const movies = results.Search;
-            console.log(movies);
-    
-            let cards = '';
-    
-            movies.forEach(m => {
-                cards += showCards(m);
-            });
-            $('.movie-container').html(cards);
-    
-            // Ketika tombol detail di klik
-            $('.modal-detail-button').on('click', function() {
-                // console.log($(this).data('imdbid'));
-    
-                $.ajax({
-                    url: 'http://www.omdbapi.com/?apikey=7cf6431&i=' + $(this).data('imdbid'),
-
-                    success: m => {
-                        console.log(m);
-                        const movieDetail = showMovieDetail(m);
-    
-                        // Meminta ajax untuk mencarikan selector modal-body pada tag elemen html
-                        $('.modal-body').html(movieDetail);
-                    },
-                    error: (e) => {
-                        console.log(e.responseText);
-                    }
-                });
-            });
-        },
-        error: (e) => {
-            console.log(e.responseText);
-        }
-    });
+// Ketika tombol cari diklik
+const searchButton = document.querySelector('.search-button');
+searchButton.addEventListener('click', async function() {
+    const inputKeyword = document.querySelector('.input-keyword');
+    const movies = await getMovies(inputKeyword.value);
+    updateUI(movies);
 });
+
+// Ketika tombol detail diklik
+// Menggunakan event binding
+document.addEventListener('click', async function(e) {
+    if(e.target.classList.contains('modal-detail-button')) {
+        const imdbid = e.target.dataset.imdbid;
+        const movieDetail = await getMovieDetail(imdbid);
+        updateUIDetail(movieDetail);
+    }
+});
+
+function getMovieDetail(imdbid) {
+    return fetch('http://www.omdbapi.com/?apikey=7cf6431&i=' + imdbid)
+        .then(response => response.json())
+        .then(m => m);
+}
+
+function updateUIDetail(m) {
+    const movieDetail = showMovieDetail(m);
+    const modalBody = document.querySelector('.modal-body');
+    modalBody.innerHTML = movieDetail;
+}
+
+
+function getMovies(keyword) {
+    return fetch('http://www.omdbapi.com/?apikey=7cf6431&s=' + keyword)
+    .then(response => response.json())
+    .then(response => response.Search);
+}
+
+function updateUI(movies) {
+    let cards = '';
+    movies.forEach(m => cards += showCards(m));
+    const movieContainer = document.querySelector('.movie-container');
+    movieContainer.innerHTML = cards;
+}
 
 function showCards(m) {
     return `<div class="col-md-4 my-5">

@@ -1,0 +1,19 @@
+---- Error Handling ----
+
+Catatan:
+    - Ketika menggunakan fetch() itu error yang ditangkap hanya yang ada pada networknya atau url nya saja
+      jadi sebenarnya errornya dimunculkan oleh browser melalui tab console
+
+    - Error Handling (Promise):
+        - .than()
+        - .catch()
+    
+    - Error Handling (Async Await):
+        - try
+        - catch()
+        
+    - Error Handling (Fetch())
+
+    - Throw:
+        - Agar supaya ada error dapat ditangkap dengan catch yang dipasang
+    

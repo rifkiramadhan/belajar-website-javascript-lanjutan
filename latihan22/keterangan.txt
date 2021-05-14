@@ -1,0 +1,25 @@
+---- Async Await (Asyncronous Function) ----
+
+1. Pengertian:
+    - Menurut MDN:
+        - "Sebuah function yang bekerja secara Asyncronous (melalui event loop), yang menghasilkan (implisit) promise
+          sebagai return value-nya, tapi cara penulisan code nya menggunakan penulisan yang syncronous (standard)"
+        - "Sebuah asyc function dapat memiliki keyword await di dalamnya untuk memberhentikan sementara eksekusi
+          fungsinya sambil menunggu promise nya selesai"
+    
+    - Fungsi yang berjalan secara Asyncronous
+    - Menghasilkan (implisit) promise
+    - Cara penulisannya sama seperti syncronous function (function biasa)
+
+---- Error Handling ----
+
+Catatan:
+    - Error Handling (Promise):
+        - .than()
+        - .catch()
+    
+    - Error Handling (Async Await):
+        - try
+        - catch()
+    - Error Handling (Fetch()):
+    
